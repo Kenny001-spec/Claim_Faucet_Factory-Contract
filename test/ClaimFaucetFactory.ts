@@ -85,8 +85,8 @@ describe("ClaimFaucetFactory Test", function () {
         deployClaimFaucetFactoryFixture
       );
 
-      await claimFaucetFactory.connect(addr1).deployClaimFaucet("Deegen Token", "DT");
-      await claimFaucetFactory.connect(addr1).deployClaimFaucet("DLT Token", "DLT");
+      await claimFaucetFactory.connect(addr1).deployClaimFaucet("DLTToken", "DLT");
+      await claimFaucetFactory.connect(addr1).deployClaimFaucet("ValoraToken", "VLT");
 
       const userContracts = await claimFaucetFactory.connect(addr1).getUserDeployedContract();
       expect(userContracts.length).to.equal(2);
@@ -100,8 +100,8 @@ describe("ClaimFaucetFactory Test", function () {
           deployClaimFaucetFactoryFixture
         );
   
-        await claimFaucetFactory.connect(addr1).deployClaimFaucet("Deegen Token", "DT");
-        await claimFaucetFactory.connect(addr1).deployClaimFaucet("DLT Token", "DLT");
+        await claimFaucetFactory.connect(addr1).deployClaimFaucet("DLTToken", "DLT");
+        await claimFaucetFactory.connect(addr1).deployClaimFaucet("ValoraToken", "VLT");
   
         const [deployer] = await claimFaucetFactory
           .connect(addr1)
